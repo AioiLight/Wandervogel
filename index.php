@@ -4,61 +4,35 @@
         <title><?php wp_title(); ?></title>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+        <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
         <?php wp_head(); ?>
     </head>
 
     <body <?php body_class(); ?>>
         <header>
-            <h1>Wandervogel</h1>
-            <p>Blog Theme</p>
+            <h1 class="blog-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+            <p class="blog-description"><?php bloginfo( 'description' ); ?></p>
         </header>
 
         <div class="body">
             <main class="grid-item">
+                <?php if(have_posts()): while(have_posts()): the_post(); ?>
                 <article>
-                <? php the_post(); ?>
+                    <h2 class="post-title"><a href="<?php the_permalink( $post ); ?>"><?php the_title(); ?></a></h2>
+
+                    <?php the_content(); ?>
                 </article>
+                <?php endwhile; endif; ?>
             </main>
 
             <div class="side grid-item">
-                <nav>
-                    <h2>Links</h2>
-                    <ul>
-                        <li>Index</li>
-                        <li>Category 1</li>
-                        <li>Category 2</li>
-                        <li>Category 3</li>
-                    </ul>
-                </nav>
-
-                <aside>
-                    <h2>Info</h2>
-
-                    <dl>
-                        <dt>Created</dt>
-                        <dd>2020/4/1</dd>
-
-                        <dt>Update</dt>
-                        <dd>2020/4/2</dd>
-
-                        <dt>Author</dt>
-                        <dd>Author</dd>
-
-                        <dt>Tags</dt>
-                        <dd>Tag 1</dd>
-                        <dd>Tag 2</dd>
-                        <dd>Tag 3</dd>
-
-                        <dt>Category</dt>
-                        <dd>Category</dd>
-                    </dl>
-                </aside>
+                <?php dynamic_sidebar(); ?>
             </div>
         </div>
 
         <footer>
-            <p>(c) 2020 Author</p>
-            <p>Powered by WordPress and Love &lt;3 </p>
+            <p class="blog-copyright">(c) 2020 Author</p>
+            <p class="blog-powered">Powered by WordPress and Love &lt;3 </p>
         </footer>
         <?php wp_footer(); ?>
     </body>

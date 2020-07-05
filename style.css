@@ -30,15 +30,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     }
 }
 
-* {
-    font-size: 18px;
-    font-family: sans-serif;
-}
-
 body {
     background-color: var(--background);
     color: var(--main-text);
-
+    
+    font-size: 18px;
+    font-family: sans-serif;
     margin: 1rem;
 }
 
@@ -80,6 +77,17 @@ a:hover {
     color: #a0a0ff;
 }
 
+
+h1 a, h1 a:visited, h1 a:hover,
+h2 a, h2 a:visited, h2 a:hover,
+h3 a, h3 a:visited, h3 a:hover,
+h4 a, h4 a:visited, h4 a:hover,
+h5 a, h5 a:visited, h5 a:hover,
+h6 a, h6 a:visited, h6 a:hover {
+    color: var(--main-text);
+    text-decoration-line: none;
+}
+
 .grid-item {
     background-color: var(--body-background);
     padding: 2rem;
@@ -119,6 +127,10 @@ footer {
     padding: 0.4rem;
     box-shadow: 0px 2px 2px var(--shadow);
     border-radius: 0.4rem;
+}
+
+.blog-copyright, .blog-powered {
+    font-size: 0.8rem;
 }
 
 
