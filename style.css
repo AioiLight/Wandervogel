@@ -88,6 +88,10 @@ h6 a, h6 a:visited, h6 a:hover {
     text-decoration-line: none;
 }
 
+footer {
+    text-align: right;
+}
+
 .grid-item {
     background-color: var(--body-background);
     padding: 2rem;
@@ -111,10 +115,6 @@ h6 a, h6 a:visited, h6 a:hover {
     min-width: 10rem;
 }
 
-footer {
-    text-align: right;
-}
-
 .body {
     display: grid;
     grid-template-columns: 4fr 1fr;
@@ -131,6 +131,10 @@ footer {
 
 .blog-copyright, .blog-powered {
     font-size: 0.8rem;
+}
+
+.sidebar-title {
+    font-size: 1.5rem;
 }
 
 
