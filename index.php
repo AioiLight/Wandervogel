@@ -43,13 +43,15 @@
                             echo $html;
                         ?>
                         <?php
-                            $tags = get_tags();
+                            $tags = get_the_tags();
                             $html = '<div class="post-tags">タグ: ';
-                            foreach ( $tags as $tag ) {
-                                $tag_link = get_tag_link( $tag->term_id );
-                                        
-                                $html .= '<a href="' . $tag_link . '" title="' . $tag->name . '"><span class="tag theme">';
-                                $html .= $tag->name . '</span></a>';
+                            if ( $tags ) {
+                                foreach ( $tags as $tag ) {
+                                    $tag_link = get_tag_link( $tag->term_id );
+                                            
+                                    $html .= '<a href="' . $tag_link . '" title="' . $tag->name . '"><span class="tag theme">';
+                                    $html .= $tag->name . '</span></a>';
+                                }
                             }
                             $html .= '</div>';
                             echo $html;
