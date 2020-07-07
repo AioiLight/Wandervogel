@@ -14,7 +14,7 @@
                         <?php endwhile; endif; ?>
                     </div>
 
-                    <?php posts_nav_link(' ', '<span class="button theme">新しめの投稿</span>', '<span class="button theme">古めの投稿</span>'); ?>
+                    <?php get_template_part( 'parts/post-nav' ); ?>
                 <?php else: ?>
                     <?php if(have_posts()): while(have_posts()): the_post(); ?>
                     <article>
