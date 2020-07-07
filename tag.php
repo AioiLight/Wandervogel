@@ -20,9 +20,7 @@
                 <?php posts_nav_link(' ', '<span class="button theme">新しめの投稿</span>', '<span class="button theme">古めの投稿</span>'); ?>
             </main>
                 
-            <div class="side grid-item">
-                <?php dynamic_sidebar(); ?>
-            </div>
+            <?php get_sidebar(); ?>
         </div>
         <?php get_footer(); ?>
     </body>

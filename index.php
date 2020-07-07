@@ -52,9 +52,7 @@
                 <?php endif; ?>
             </main>
                 
-            <div class="side grid-item">
-                <?php dynamic_sidebar(); ?>
-            </div>
+            <?php get_sidebar(); ?>
         </div>
         <?php get_footer(); ?>
     </body>
