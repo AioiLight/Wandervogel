@@ -38,7 +38,7 @@
                         <?php
                             $category = get_the_category();
                             $html = '<div class="post-category">カテゴリ: ';
-                            $html .= '<a href="' . get_category_link( $category[0]-> term_id ) . '" title="' . $category[0]->cat_name . '"><span class="tag theme">';
+                            $html .= '<a href="' . get_category_link( $category[0]-> term_id ) . '" title="' . $category[0]->cat_name . '"><span class="label theme">';
                             $html .= $category[0]->cat_name . '</span></a>';
                             echo $html;
                         ?>
@@ -49,7 +49,7 @@
                                 foreach ( $tags as $tag ) {
                                     $tag_link = get_tag_link( $tag->term_id );
                                             
-                                    $html .= '<a href="' . $tag_link . '" title="' . $tag->name . '"><span class="tag theme">';
+                                    $html .= '<a href="' . $tag_link . '" title="' . $tag->name . '"><span class="label theme">';
                                     $html .= $tag->name . '</span></a>';
                                 }
                             }
@@ -60,8 +60,10 @@
                         <?php the_content(); ?>
                     </article>
                     <?php endwhile; endif; ?>
-                <?php previous_post_link( '%link', '<span class="button theme">前: %title</span>'); ?>
-                <?php next_post_link( '%link', '<span class="button theme">次: %title</span>'); ?>
+                    <?php if (is_single()) : ?>
+                        <?php previous_post_link( '%link', '<span class="button theme">前: %title</span>'); ?>
+                        <?php next_post_link( '%link', '<span class="button theme">次: %title</span>'); ?>
+                    <?php endif; ?>
                 <?php endif; ?>
             </main>
                 

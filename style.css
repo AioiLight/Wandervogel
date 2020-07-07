@@ -144,20 +144,26 @@ footer {
     font-size: 1.5rem;
 }
 
-.tag {
+.label {
     display: inline-block;
     text-align: center;
     padding: 0.2rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
     margin: 0.2rem;
     overflow-wrap: break-word;
+    border-radius: 0.4rem;
 }
 
 .button {
     display: inline-block;
     text-align: center;
     padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     margin: 0.5rem;
     overflow-wrap: break-word;
+    border-radius: 0.4rem;
 }
 
 .theme {
