@@ -16,7 +16,7 @@
                                 <?php endif; ?>
                                 <div>
                                     <h2><?php the_title(); ?></h2>
-                                    <p><?php the_date(); ?></p>
+                                    <p><?php get_the_date(); ?></p>
                                     <p><?php the_excerpt(); ?></p>
                                 </div>
                             </article>

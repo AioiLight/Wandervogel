@@ -12,7 +12,7 @@
                                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/eyecatch.png">
                                 <?php endif; ?>
                                 <h2><?php the_title(); ?></h2>
-                                <p><?php the_date(); ?></p>
+                                <p><?php get_the_date(); ?></p>
                                 <p><?php the_excerpt(); ?></p>
                             </article>
                         </a>
