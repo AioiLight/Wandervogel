@@ -24,6 +24,8 @@
                     <?php if(have_posts()): while(have_posts()): the_post(); ?>
                     <article>
                         <h2 class="post-title"><?php the_title(); ?></h2>
+
+                        <div class="date">作成: <time><?php echo get_the_date(); ?></time> / 更新: <time><?php the_modified_date(); ?></time></p>
                         
                         <?php
                             $category = get_the_category();
