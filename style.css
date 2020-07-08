@@ -110,7 +110,7 @@ footer {
 
 .index-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1rem;
 }
 
@@ -133,11 +133,22 @@ footer {
 .article-card {
     background-color: var(--card-background);
     margin: 0.2rem;
-    padding: 0.4rem;
     box-shadow: 0px 2px 2px var(--shadow);
     border-radius: 0.4rem;
-    height: 10rem;
+    height: 24rem;
     overflow: hidden;
+
+    display: grid;
+    grid-auto-flow: dense;
+}
+
+.article-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.article-card h2 {
+    margin-left: 1rem;
 }
 
 .blog-copyright, .blog-powered {
@@ -187,5 +198,15 @@ footer {
     .grid-item {
         padding: 1rem;
         padding-top: 1rem;
+    }
+
+    .index-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .index-grid {
+        grid-template-columns: 1fr;
     }
 }
