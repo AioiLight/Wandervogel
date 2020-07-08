@@ -110,8 +110,7 @@ footer {
 
 .index-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-auto-flow: row;
+    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
     gap: 1rem;
 }
 
@@ -197,15 +196,5 @@ footer {
     .grid-item {
         padding: 1rem;
         padding-top: 1rem;
-    }
-
-    .index-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .index-grid {
-        grid-template-columns: 1fr;
     }
 }
