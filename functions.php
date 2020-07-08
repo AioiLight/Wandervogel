@@ -7,4 +7,7 @@ register_sidebar(array(
 			'before_title' => '<h2 class="sidebar-title">',
 			'after_title' => '</h2>'
 ));
+
+// eyecatch
+add_theme_support( 'post-thumbnails' );
 ?>

@@ -9,9 +9,16 @@
                         <?php if(have_posts()): while(have_posts()): the_post(); ?>
                         <a href="<?php the_permalink( $post ); ?>">
                             <article class="article-card">
-                                <h3><?php the_title(); ?></h3>
-                                <p><?php the_date(); ?></p>
-                                <p><?php the_excerpt(); ?></p>
+                                <?php if (has_post_thumbnail()) : ?>
+                                <?php the_post_thumbnail(); ?>
+                                <?php else: ?>
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/eyecatch.png">
+                                <?php endif; ?>
+                                <div>
+                                    <h2><?php the_title(); ?></h2>
+                                    <p><?php the_date(); ?></p>
+                                    <p><?php the_excerpt(); ?></p>
+                                </div>
                             </article>
                         </a>
                         <?php endwhile; endif; ?>
