@@ -102,7 +102,7 @@ footer {
     margin-bottom: 0rem;
 }
 
-.grid-item p {
+.grid-item > article p {
     margin: 0.2em;
     text-indent: 1em;
     line-height: 1.7em;

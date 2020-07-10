@@ -25,13 +25,13 @@
                     <article>
                         <h2 class="post-title"><?php the_title(); ?></h2>
 
-                        <div class="date">作成: <time><?php echo get_the_date(); ?></time> / 更新: <time><?php the_modified_date(); ?></time></p>
+                        <div class="date">作成: <time><?php echo get_the_date(); ?></time> / 更新: <time><?php the_modified_date(); ?></time></div>
                         
                         <?php
                             $category = get_the_category();
                             $html = '<div class="post-category">カテゴリ: ';
                             $html .= '<a href="' . get_category_link( $category[0]-> term_id ) . '" title="' . $category[0]->cat_name . '"><span class="label theme">';
-                            $html .= $category[0]->cat_name . '</span></a>';
+                            $html .= $category[0]->cat_name . '</span></a></div>';
                             echo $html;
                         ?>
                         <?php
