@@ -10,6 +10,6 @@
 
     <body <?php body_class(); ?>>
         <header>
-            <h1 class="blog-title header-link"><a href="<?php bloginfo('url'); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+            <div class="blog-title header-link"><a href="<?php bloginfo('url'); ?>"><?php bloginfo( 'name' ); ?></a></div>
             <p class="blog-description"><?php bloginfo( 'description' ); ?></p>
         </header>

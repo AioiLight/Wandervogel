@@ -2,7 +2,7 @@
         <div class="body">
             <main class="grid-item">
                 <section>
-                    <h2>タグ: <?php single_tag_title(); ?></h2>
+                    <h1>タグ: <?php single_tag_title(); ?></h1>
                     <p><?php tag_description(); ?></p>
                     <div class="index-grid header-link">
                         <?php if(have_posts()): while(have_posts()): the_post(); ?>
@@ -15,7 +15,6 @@
                                 <?php endif; ?>
                                 <div>
                                     <h2><?php the_title(); ?></h2>
-                                    <p><?php echo get_the_date(); ?></p>
                                     <p><?php the_excerpt(); ?></p>
                                 </div>
                             </article>

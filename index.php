@@ -11,8 +11,7 @@
                                 <?php else: ?>
                                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/eyecatch.png">
                                 <?php endif; ?>
-                                <h2><?php the_title(); ?></h2>
-                                <p><?php echo get_the_date(); ?></p>
+                                <h1><?php the_title(); ?></h1>
                                 <p><?php the_excerpt(); ?></p>
                             </article>
                         </a>
@@ -23,7 +22,7 @@
                 <?php else: ?>
                     <?php if(have_posts()): while(have_posts()): the_post(); ?>
                     <article>
-                        <h2 class="post-title"><?php the_title(); ?></h2>
+                        <h1 class="post-title"><?php the_title(); ?></h1>
 
                         <div class="date">作成: <time><?php echo get_the_date(); ?></time> / 更新: <time><?php the_modified_date(); ?></time></div>
                         

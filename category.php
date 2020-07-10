@@ -2,7 +2,7 @@
         <div class="body">
             <main class="grid-item">
                 <section>
-                    <h2>カテゴリ: <?php single_cat_title(); ?></h2>
+                    <h1>カテゴリ: <?php single_cat_title(); ?></h1>
                     <p><?php echo category_description(); ?></p>
 
                     <div class="index-grid header-link">
@@ -16,7 +16,6 @@
                                 <?php endif; ?>
                                 <div>
                                     <h2><?php the_title(); ?></h2>
-                                    <p><?php echo get_the_date(); ?></p>
                                     <p><?php the_excerpt(); ?></p>
                                 </div>
                             </article>
