@@ -105,7 +105,9 @@ footer {
 .grid-item p {
     margin: 0.2em;
     text-indent: 1em;
-    line-height: 1.5em;
+    line-height: 1.7em;
+    margin-top: 1.7em;
+    margin-bottom: 1.7em;
 }
 
 .index-grid {
