@@ -11,11 +11,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
 :root {
-    --background: #ffffff;
+    --background: #fafafa;
     --main-text: #000000;
 
-    --body-background: #fafafa;
-    --card-background: #f0f0f0;
+    --body-background: #ffffff;
+    --card-background: #fafafa;
+    --onepoint-color: #e9e9e9;
 
     --shadow: #000000;
 
@@ -29,6 +30,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
         --body-background: #222222;
         --card-background: #2a2a2a;
+        --onepoint-color: #3b3b3b;
     }
 }
 
@@ -74,6 +76,20 @@ a:hover {
     color: #a0a0ff;
 }
 
+blockquote {
+    background-color: var(--card-background);
+    border-left: solid 0.4rem var(--onepoint-color);
+    padding: 0.5rem;
+}
+
+blockquote cite {
+    font-size: 0.8em;
+    font-style: inherit;
+}
+
+blockquote cite::before {
+    content: "――";
+}
 
 .header-link a{
     color: var(--main-text);
