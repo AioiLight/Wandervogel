@@ -4,7 +4,7 @@ Theme Name: Wandervogel
 Author: AioiLight
 Author URI: https://aioilight.space/
 Description: Wataridori
-Version: 1.0
+Version: 1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -163,15 +163,12 @@ footer {
 }
 
 .article-card h1 {
-    margin-left: 1rem;
-    margin-top: 0.2rem;
+    margin: 0.2rem 0.25rem;
     font-size: 1.4rem;
 }
 
-.article-card h2 {
-    margin-left: 1rem;
-    margin-top: 0.2rem;
-    font-size: 1.4rem;
+.article-card p {
+    margin: 0 0.5rem;
 }
 
 .blog-copyright, .blog-powered {
