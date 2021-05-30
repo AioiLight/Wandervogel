@@ -140,6 +140,10 @@ footer {
     margin-left: -1.5em;
 }
 
+.side ul li {
+    margin-bottom: 0.75em;
+}
+
 .body {
     display: grid;
     grid-template-columns: 4fr 1fr;
