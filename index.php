@@ -50,11 +50,34 @@
 
                         <?php the_content(); ?>
                     </article>
-                    <?php endwhile; endif; ?>
                     <?php if (is_single()) : ?>
-                        <?php previous_post_link( '%link', '<span class="button theme">前: %title</span>'); ?>
-                        <?php next_post_link( '%link', '<span class="button theme">次: %title</span>'); ?>
+                        <div>
+                            <span id="sharing" class="button theme" style="cursor: pointer;">このブログ記事を共有</span>
+                            <span id="shareresult"> 他の人にこの記事を共有</span>
+                            <script>
+                            const shareData = {
+                                title: '<?php bloginfo( 'name' ); ?>',
+                                text: '<?php the_title(); ?>',
+                                url: '<?php the_permalink(); ?>',
+                                }
+
+                            const btn = document.querySelector('#sharing');
+                            const resultPara = document.querySelector('#shareresult');
+
+                            btn.addEventListener('click', async () => {
+                            try {
+                                await navigator.share(shareData)
+                                resultPara.textContent = ' 共有ありがとうございます！'
+                            } catch(err) {
+                            }
+                            });
+                            </script>
+                        <div>
+                            <?php previous_post_link( '%link', '<span class="button theme">前: %title</span>'); ?>
+                            <?php next_post_link( '%link', '<span class="button theme">次: %title</span>'); ?>
+                        </div>
                     <?php endif; ?>
+                    <?php endwhile; endif; ?>
                 <?php endif; ?>
             </main>
                 
