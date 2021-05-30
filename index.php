@@ -52,7 +52,7 @@
                     </article>
                     <?php if (is_single()) : ?>
                         <div>
-                            <span id="sharing" class="button theme" style="cursor: pointer;">このブログ記事を共有</span>
+                            <span id="sharing" class="button theme" style="cursor: pointer;">ブログ記事を共有</span>
                             <span id="shareresult"> 他の人にこの記事を共有</span>
                             <script>
                             const shareData = {
