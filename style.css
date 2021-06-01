@@ -98,7 +98,7 @@ blockquote cite::before {
 table {
     background-color: var(--card-background);
     display: block;
-    overflow-x: scroll;
+    overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
     border-spacing: 0;
