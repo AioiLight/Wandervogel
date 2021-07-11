@@ -42,7 +42,7 @@ body {
     background-color: var(--background);
     color: var(--main-text);
     
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-family: sans-serif;
     margin: 1rem 1rem;
     max-width: 1920px;
@@ -56,32 +56,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 2.4rem;
+    font-size: 2.2em;
     border-left: 1rem solid var(--onepoint-color);
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 2.0em;
     border-left: 0.7rem solid var(--onepoint-color);
 }
 
 h3 {
-    font-size: 1.8rem;
+    font-size: 1.8em;
     border-left: 0.5rem solid var(--onepoint-color);
 }
 
 h4 {
-    font-size: 1.6rem;
+    font-size: 1.6em;
     border-left: 0.25rem solid var(--onepoint-color);
 }
 
 h5 {
-    font-size: 1.4rem;
+    font-size: 1.4em;
     border-left: 0.2rem solid var(--onepoint-color);
 }
 
 h6 {
-    font-size: 1.2rem;
+    font-size: 1.2em;
     border-left: 0.1rem solid var(--onepoint-color);
 }
 
@@ -211,7 +211,7 @@ footer {
 .article-card h1, .article-card h2{
     margin: 0;
     border: none;
-    font-size: 1.2rem;
+    font-size: 1.2em;
     background-color: var(--onepoint-color);
     word-break: break-all;
 }
@@ -225,7 +225,7 @@ footer {
 }
 
 .sidebar-title {
-    font-size: 1.5rem;
+    font-size: 1.5em;
 }
 
 .post-tags {
@@ -260,11 +260,11 @@ footer {
 }
 
 .blog-title {
-    font-size: 2.4rem;
+    font-size: 2.4em;
 }
 
 .blog-description {
-    font-size: 1.2rem;
+    font-size: 1.2em;
     margin-left: 2rem;
     margin-top: 0rem;
 }
