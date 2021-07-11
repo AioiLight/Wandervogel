@@ -9,9 +9,12 @@
                         <a href="<?php the_permalink( $post ); ?>">
                             <article class="article-card">
                                 <?php if (has_post_thumbnail()) : ?>
-                                <?php the_post_thumbnail(); ?>
+                                    <img src="<?php
+                                    $tid = get_post_thumbnail_id();
+                                    $timg = wp_get_attachment_image_src($tid, 'full');
+                                    echo $timg[0];?>" loading="lazy">
                                 <?php else: ?>
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/eyecatch.png">
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/eyecatch.png" loading="lazy">
                                 <?php endif; ?>
                                 <div>
                                     <h2><?php the_title(); ?></h2>
