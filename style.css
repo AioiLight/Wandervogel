@@ -99,8 +99,9 @@ a:hover {
 
 blockquote {
     background-color: var(--card-background);
-    border-left: solid 0.4rem var(--onepoint-color);
-    padding: 0.5rem;
+    border-left: solid 0.5em var(--onepoint-color);
+    padding: 0.5em;
+    margin: 1em;
 }
 
 blockquote cite {
