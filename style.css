@@ -193,7 +193,7 @@ footer {
     height: auto;
 }
 
-.article-card h1 {
+.article-card h1, .article-card h2{
     margin: 0.2rem 0.25rem;
     font-size: 1.4rem;
 }
