@@ -122,13 +122,13 @@ figure {
     margin: 1rem;
 }
 
+footer {
+    text-align: right;
+}
+
 .header-link a{
     color: var(--main-text);
     text-decoration-line: none;
-}
-
-footer {
-    text-align: right;
 }
 
 .grid-item {
