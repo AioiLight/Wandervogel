@@ -118,6 +118,10 @@ table tbody tr td {
     padding: 0.25rem 0.2rem;
 }
 
+figure {
+    margin: 1rem;
+}
+
 .header-link a{
     color: var(--main-text);
     text-decoration-line: none;
@@ -252,9 +256,14 @@ footer {
     height: auto;
 }
 
+
 @media (max-width: 1024px) {
     body {
         margin: 0.2rem;    
+    }
+
+    figure {
+        margin: 0.5rem;
     }
 
     .body {
