@@ -4,7 +4,7 @@ Theme Name: Wandervogel
 Author: AioiLight
 Author URI: https://aioilight.space/
 Description: Wataridori
-Version: 2.1
+Version: 2.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -23,6 +23,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     --theme-color: #e61b62;
 
     --grid-margin: 1.5rem;
+
+    --radius: 4px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -153,7 +155,7 @@ footer {
     background-color: var(--body-background);
     padding: var(--grid-margin);
     box-shadow: 0px 2px 6px var(--shadow);
-    border-radius: 0.4rem;
+    border-radius: var(--radius);
     min-width: 0;
 }
 
@@ -197,7 +199,7 @@ footer {
 .article-card {
     background-color: var(--card-background);
     box-shadow: 0px 2px 2px var(--shadow);
-    border-radius: 0.4rem;
+    border-radius: var(--radius);
     height: 22rem;
     overflow: hidden;
 }
@@ -205,6 +207,7 @@ footer {
 .article-card img {
     max-width: 100%;
     height: auto;
+    display: block;
 }
 
 .article-card h1, .article-card h2{
@@ -239,7 +242,7 @@ footer {
     padding-right: 0.8rem;
     margin: 0.2rem;
     overflow-wrap: break-word;
-    border-radius: 0.4rem;
+    border-radius: var(--radius);
 }
 
 .button {
@@ -250,7 +253,7 @@ footer {
     padding-right: 1rem;
     margin: 0.5rem;
     overflow-wrap: break-word;
-    border-radius: 0.4rem;
+    border-radius: var(--radius);
 }
 
 .theme {
