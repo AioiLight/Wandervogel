@@ -22,6 +22,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
     --theme-color: #e61b62;
 
+    --link-color: #6060ff;
+    --link-hover-color: #a0a0ff;
+
     --grid-margin: 1.5rem;
 
     --radius: 4px;
@@ -37,6 +40,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
         --onepoint-color: #3b3b3b;
 
         --shadow: #000000;
+
+        --link-color: #a4a4ff;
+        --link-hover-color: #ccccff;
     }
 }
 
@@ -95,11 +101,11 @@ code {
 }
 
 a, a:visited {
-    color: #a4a4ff;
+    color: var(--link-color);
 }
 
 a:hover {
-    color: #ccccff;
+    color: var(--link-hover-color);
 }
 
 ul li {
