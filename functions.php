@@ -2,6 +2,7 @@
 // Sidebar
 register_sidebar(array(
 			'name'=>'Sidebar',
+			'id' => 'sidebar-1',
 			'before_widget'=>'<aside>',
 			'after_widget'=>'</aside>',
 			'before_title' => '<h2 class="sidebar-title">',
