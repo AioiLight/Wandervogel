@@ -212,9 +212,11 @@ footer {
 }
 
 .article-card img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
 
 .article-card h1, .article-card h2{
