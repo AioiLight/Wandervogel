@@ -220,6 +220,18 @@ footer {
     border-radius: var(--radius);
     height: 22rem;
     overflow: hidden;
+    position: relative;
+}
+
+.article-card::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, var(--card-background) 0%, transparent 20%);
 }
 
 .article-card img {
