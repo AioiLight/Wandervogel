@@ -14,4 +14,11 @@ add_theme_support( 'post-thumbnails' );
 
 // disable image scalling
 add_filter( 'big_image_size_threshold', '__return_false' );
+
+// delete jQuery
+add_action('init', function() {
+	if (!is_admin()) {
+		wp_deregister_script('jquery');
+	}
+});
 ?>
