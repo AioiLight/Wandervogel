@@ -195,6 +195,15 @@ footer {
     margin-left: -1.5em;
 }
 
+.side li {
+    margin: 0;
+}
+
+.side li a {
+    display: inline-block;
+    padding: 0.5em 0;
+}
+
 .body {
     display: grid;
     grid-template-columns: 4fr 1fr;
