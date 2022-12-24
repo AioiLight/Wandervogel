@@ -55,7 +55,8 @@ body {
     
     font-size: 1rem;
     font-family: sans-serif;
-    margin: 1rem 1rem;
+    margin: 0 auto;
+    padding: 1rem;
     max-width: 1920px;
 }
 
@@ -192,7 +193,8 @@ footer {
 }
 
 .side ul {
-    margin-left: -1.5em;
+    list-style: none;
+    padding: 0;
 }
 
 .side li {
@@ -292,6 +294,13 @@ footer {
 .wp-block-image img {
     max-width: 100%;
     height: auto;
+}
+
+.wp-block-archives-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0 2em;
 }
 
 
