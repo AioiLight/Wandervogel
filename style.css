@@ -32,13 +32,15 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
     --heading-padding: 1rem;
     --heading-size: 1.0;
+
+    scroll-behavior: smooth;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --background: #000;
         --main-text: #fff;
-        --sub-text: #ddd;
+        --sub-text: #ccc;
 
         --body-background: #222;
         --card-background: #2a2a2a;
@@ -54,15 +56,25 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 body {
     background-color: var(--background);
     color: var(--main-text);
-    
     font-size: 1rem;
     font-family: sans-serif;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 2rem;
     max-width: 1920px;
+    box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
+header, footer {
+    text-align: center;
+}
+
+h1 {
+    padding: 1em var(--heading-padding);
+    margin: 0.25em calc(var(--grid-margin) * -1);
+    margin-top: calc(var(--grid-margin) * -1);
+}
+
+h2, h3, h4, h5, h6 {
     background-color: var(--card-background);
     padding: 0.25em var(--heading-padding);
     margin: 0.25em calc(var(--grid-margin) * -1);
@@ -70,7 +82,6 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: calc(2.0em * var(--heading-size));
-    border-left: 1rem solid var(--onepoint-color);
 }
 
 h2 {
@@ -108,10 +119,12 @@ code {
 
 a, a:visited {
     color: var(--link-color);
+    text-decoration: none;
 }
 
 a:hover {
     color: var(--link-hover-color);
+    text-decoration: underline;
 }
 
 ul li {
@@ -161,10 +174,6 @@ figure {
     margin: 1rem;
 }
 
-footer {
-    text-align: right;
-}
-
 .header-link a{
     color: var(--main-text);
     text-decoration-line: none;
@@ -210,10 +219,10 @@ footer {
 
 .body {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 1rem;
     width: 100%;
-    margin: auto;
+    margin: auto;    
 }
 
 .article-card {
@@ -223,6 +232,7 @@ footer {
     height: 22rem;
     overflow: hidden;
     position: relative;
+    transition: opacity 0.5s;
 }
 
 .article-card::after {
@@ -236,17 +246,28 @@ footer {
     background: linear-gradient(0deg, var(--card-background) 0%, transparent 20%);
 }
 
+.article-card:hover {
+    opacity: 0.75;
+}
+
+.article-card:hover img {
+    transform: scale(1.05);
+}
+
 .article-card img {
     width: 100%;
     height: auto;
     display: block;
     aspect-ratio: 16 / 9;
     object-fit: cover;
+    transition: transform 0.5s;
 }
 
 .article-card h1, .article-card h2{
+    position: relative;
     margin: 0;
     margin-bottom: 0.25em;
+    padding: 0.25em var(--heading-padding);
     border: none;
     font-size: 1.2em;
     background-color: var(--onepoint-color);
@@ -260,6 +281,7 @@ footer {
 
 .blog-copyright, .blog-powered {
     font-size: 0.8rem;
+    color: var(--sub-text);
 }
 
 .sidebar-title {
@@ -295,6 +317,12 @@ footer {
 .theme {
     background-color: var(--theme-color);
     color: white;
+    box-shadow: 0px 2px 2px var(--shadow);
+    transition: opacity 0.5s;
+}
+
+.theme:hover {
+    opacity: 0.75;
 }
 
 .blog-title {
@@ -302,9 +330,11 @@ footer {
 }
 
 .blog-description {
-    font-size: 1.2em;
-    margin-left: 2rem;
     margin-top: 0rem;
+    color: var(--sub-text);
+}
+
+.date, .post-category, .post-tags {
     color: var(--sub-text);
 }
 
@@ -313,13 +343,9 @@ footer {
     height: auto;
 }
 
-.wp-block-archives-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0 2em;
+.wp-block-archives {
+    margin-bottom: 1em;
 }
-
 
 @media (max-width: 1024px) {
     :root {
@@ -330,7 +356,7 @@ footer {
     }
 
     body {
-        margin: 0.2rem 0.25rem;    
+        padding: 2rem 2vw;
     }
 
     figure {
