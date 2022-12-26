@@ -1,12 +1,20 @@
 <?php
 // Sidebar
 register_sidebar(array(
-			'name'=>'Sidebar',
-			'id' => 'sidebar-1',
+			'name'=>'Archive Sidebar',
+			'id' => 'archive-sidebar',
 			'before_widget'=>'<aside>',
 			'after_widget'=>'</aside>',
 			'before_title' => '<h2 class="sidebar-title">',
 			'after_title' => '</h2>'
+));
+register_sidebar(array(
+	'name'=>'Article Sidebar',
+	'id' => 'article-sidebar',
+	'before_widget'=>'<aside>',
+	'after_widget'=>'</aside>',
+	'before_title' => '<h2 class="sidebar-title">',
+	'after_title' => '</h2>'
 ));
 
 // eyecatch

@@ -83,8 +83,9 @@
                     <?php endwhile; endif; ?>
                 <?php endif; ?>
             </main>
-                
-            <?php get_sidebar(); ?>
+            
+            <?php if (is_home()): get_sidebar(); endif;?>
+            <?php if (is_single()): get_sidebar('single'); endif;?>
         </div>
         <?php get_footer(); ?>
     </body>

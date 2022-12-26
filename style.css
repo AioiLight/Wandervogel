@@ -354,6 +354,17 @@ figure {
     margin-bottom: 1em;
 }
 
+aside:has(.wp-block-simpletoc-toc) {
+    position: sticky;
+    top: 1em;
+}
+
+.simpletoc-list {
+    max-height: 80vh;
+    overflow-y: scroll;
+    scrollbar-gutter: stable;
+}
+
 @media (max-width: 1024px) {
     :root {
         --grid-margin: 1rem;
@@ -372,5 +383,15 @@ figure {
 
     .body {
         grid-template-columns: 1fr;
+    }
+    
+    aside:has(.wp-block-simpletoc-toc) {
+        position: static;
+    }
+    
+    .simpletoc-list {
+        max-height: fit-content;
+        overflow-y: visible;
+        scrollbar-gutter: auto;
     }
 }
