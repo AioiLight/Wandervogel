@@ -21,4 +21,9 @@ add_action('init', function() {
 		wp_deregister_script('jquery');
 	}
 });
+
+// delete inline css
+add_action("wp_enqueue_scripts", function () {
+	wp_dequeue_style( 'global-styles' );
+});
 ?>
