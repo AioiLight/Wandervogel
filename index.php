@@ -27,7 +27,7 @@
                     <article>
                         <h1 class="post-title"><?php the_title(); ?></h1>
 
-                        <div class="date">作成: <time><?php echo get_the_date(); ?></time> / 更新: <time><?php the_modified_date(); ?></time></div>
+                        <div class="date"><span>作成: <time><?php echo get_the_date(); ?></time></span> <span>更新: <time><?php the_modified_date(); ?></time></span> <span><a href="<?= the_permalink(); ?>">このページへのリンク</a></span></div>
                         
                         <?php
                             $category = get_the_category();

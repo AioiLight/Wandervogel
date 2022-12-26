@@ -338,6 +338,13 @@ figure {
     color: var(--sub-text);
 }
 
+.date {
+    display: flex;
+    gap: 0 1em;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .wp-block-image img {
     max-width: 100%;
     height: auto;
