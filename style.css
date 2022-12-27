@@ -244,6 +244,7 @@ figure {
     top: 0;
     left: 0;
     background: linear-gradient(0deg, var(--card-background) 0%, transparent 20%);
+    pointer-events: none;
 }
 
 .article-card:hover {
