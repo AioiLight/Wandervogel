@@ -334,11 +334,11 @@ figure {
     color: var(--sub-text);
 }
 
-.date, .post-category, .post-tags {
+.post-date, .post-category, .post-tags {
     color: var(--sub-text);
 }
 
-.date {
+.post-date {
     display: flex;
     gap: 0 1em;
     flex-direction: row;
