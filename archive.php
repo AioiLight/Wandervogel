@@ -3,7 +3,6 @@
             <main class="grid-item">
                 <section>
                     <h1>アーカイブ: <?php wp_title(); ?></h1>
-                    <p><?php echo category_description(); ?></p>
 
                     <div class="index-grid header-link">
                         <?php if(have_posts()): while(have_posts()): the_post(); ?>
