@@ -115,6 +115,11 @@ h6 {
 
 code {
     overflow-wrap: break-word;
+    background: var(--card-background);
+    padding: 0 0.5em;
+    border: 2px solid var(--sub-text);
+    border-radius: 4px;
+    user-select: all;
 }
 
 a, a:visited {
