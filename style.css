@@ -308,10 +308,6 @@ figure {
     font-size: 1.5em;
 }
 
-.post-tags {
-    margin-bottom: 2rem;
-}
-
 .label {
     display: inline-block;
     text-align: center;
@@ -320,6 +316,7 @@ figure {
     margin: 0.2rem;
     overflow-wrap: break-word;
     border-radius: var(--radius-large);
+    font-weight: bold;
 }
 
 .button {
@@ -330,6 +327,7 @@ figure {
     margin: 0.5rem;
     overflow-wrap: break-word;
     border-radius: var(--radius-large);
+    font-weight: bold;
 }
 
 .theme {
@@ -350,13 +348,24 @@ figure {
 .blog-description {
     margin-top: 0rem;
     color: var(--sub-text);
+    font-size: 12px;
 }
 
-.post-date, .post-category, .post-tags {
+.post-info {
     color: var(--sub-text);
+    display: grid;
+    line-height: 2.5;
+    margin-block-end: 2rem;
 }
 
 .post-date {
+    display: flex;
+    gap: 0 1em;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.post-tags {
     display: flex;
     gap: 0 1em;
     flex-direction: row;
@@ -392,7 +401,7 @@ aside:has(.wp-block-simpletoc-toc) {
     }
 
     body {
-        padding: 2rem 2vw;
+        padding: 0 2vw;
     }
 
     figure {

@@ -27,34 +27,35 @@
                     <article>
                         <h1 class="post-title"><?php the_title(); ?></h1>
 
-                        <div class="post-date"><span>作成: <time><?php echo get_the_date(); ?></time></span> <span>更新: <time><?php the_modified_date(); ?></time></span> <span><a href="<?= the_permalink(); ?>">このページへのリンク</a></span></div>
-                        
-                        <?php
-                            $category = get_the_category();
-                            $html = '<div class="post-category">カテゴリ: ';
-                            $html .= '<a href="' . get_category_link( $category[0]-> term_id ) . '" title="' . $category[0]->cat_name . '"><span class="label theme">';
-                            $html .= $category[0]->cat_name . '</span></a></div>';
-                            echo $html;
-                        ?>
-                        <?php
-                            $tags = get_the_tags();
-                            $html = '<div class="post-tags">タグ: ';
-                            if ( $tags ) {
-                                foreach ( $tags as $tag ) {
-                                    $tag_link = get_tag_link( $tag->term_id );
-                                            
-                                    $html .= '<a href="' . $tag_link . '" title="' . $tag->name . '"><span class="label theme">';
-                                    $html .= $tag->name . '</span></a>';
+                        <div class="post-info">                            
+                            <?php
+                                $category = get_the_category();
+                                $html = '<div class="post-category">カテゴリ: ';
+                                $html .= '<a href="' . get_category_link( $category[0]-> term_id ) . '" title="' . $category[0]->cat_name . '">';
+                                $html .= $category[0]->cat_name . '</a></div>';
+                                echo $html;
+                            ?>
+                            <?php
+                                $tags = get_the_tags();
+                                $html = '<div class="post-tags"><span>タグ:</span>';
+                                if ( $tags ) {
+                                    foreach ( $tags as $tag ) {
+                                        $tag_link = get_tag_link( $tag->term_id );
+                                                
+                                        $html .= '<a href="' . $tag_link . '" title="' . $tag->name . '">';
+                                        $html .= $tag->name . '</a>';
+                                    }
                                 }
-                            }
-                            $html .= '</div>';
-                            echo $html;
-                        ?>
+                                $html .= '</div>';
+                                echo $html;
+                            ?>
+                        </div>
 
                         <?php the_content(); ?>
                     </article>
                     <?php if (is_single()) : ?>
                         <div>
+                            <div class="post-date"><span>作成: <time><?php echo get_the_date(); ?></time></span> <span>更新: <time><?php the_modified_date(); ?></time></span></div>
                             <span id="sharing" class="button theme" style="cursor: pointer;">ブログ記事を共有</span>
                             <span id="shareresult"> 他の人にこの記事を共有</span>
                             <script>
