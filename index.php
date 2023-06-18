@@ -30,14 +30,14 @@
                         <div class="post-info">                            
                             <?php
                                 $category = get_the_category();
-                                $html = '<div class="post-category">カテゴリ: ';
+                                $html = '<div class="post-category"><span class="icons icons-folder-open"></span> ';
                                 $html .= '<a href="' . get_category_link( $category[0]-> term_id ) . '" title="' . $category[0]->cat_name . '">';
                                 $html .= $category[0]->cat_name . '</a></div>';
                                 echo $html;
                             ?>
                             <?php
                                 $tags = get_the_tags();
-                                $html = '<div class="post-tags"><span>タグ:</span>';
+                                $html = '<div class="post-tags"><span class="icons icons-label"></span> ';
                                 if ( $tags ) {
                                     foreach ( $tags as $tag ) {
                                         $tag_link = get_tag_link( $tag->term_id );
@@ -56,8 +56,7 @@
                     <?php if (is_single()) : ?>
                         <div>
                             <div class="post-date"><span>作成: <time><?php echo get_the_date(); ?></time></span> <span>更新: <time><?php the_modified_date(); ?></time></span></div>
-                            <span id="sharing" class="button theme" style="cursor: pointer;">ブログ記事を共有</span>
-                            <span id="shareresult"> 他の人にこの記事を共有</span>
+                            <span id="sharing" class="button theme" style="cursor: pointer;"><span class="icons icons-share"></span> ブログ記事を共有</span>
                             <script>
                             const shareData = {
                                 title: '<?php bloginfo( 'name' ); ?>',
@@ -66,12 +65,10 @@
                                 }
 
                             const btn = document.querySelector('#sharing');
-                            const resultPara = document.querySelector('#shareresult');
 
                             btn.addEventListener('click', async () => {
                             try {
                                 await navigator.share(shareData)
-                                resultPara.textContent = ' 共有ありがとうございます！'
                             } catch(err) {
                             }
                             });
