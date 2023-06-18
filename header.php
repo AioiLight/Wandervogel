@@ -18,7 +18,6 @@ $desc = get_pages_description();
         <meta name="twitter:site" content="@aioilight">
         <meta property="og:locale" content="ja_JP">
 
-        <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
         <link rel="alternate" href="<?php bloginfo('atom_url'); ?>" type="application/atom+xml" title="<?php bloginfo( 'name' ); ?> のフィード" />
         <?php wp_head(); ?>
     </head>
