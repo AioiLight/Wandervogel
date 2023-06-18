@@ -74,8 +74,8 @@
                             });
                             </script>
                         <div class="article-post-link">
-                            <?php previous_post_link( '%link', '<span class="button theme"><span class="icons icons-navigate-before"></span> <span>%title</span></span>'); ?>
-                            <?php next_post_link( '%link', '<span class="button theme"><span class="icons icons-navigate-next"></span> <span>%title</span></span>'); ?>
+                            <?php next_post_link( '%link', '<span class="button theme post-nav-next"><span class="icons icons-navigate-before"></span><span>%title</span></span>'); ?>
+                            <?php previous_post_link( '%link', '<span class="button theme post-nav-prev"><span class="icons icons-navigate-next"></span><span>%title</span></span>'); ?>
                         </div>
                     <?php endif; ?>
                     <?php endwhile; endif; ?>

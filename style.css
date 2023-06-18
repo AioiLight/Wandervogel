@@ -389,6 +389,10 @@ figure {
     padding-inline: 0.5em;
 }
 
+.article-post-link > a > span.post-nav-prev {
+    grid-column: 2 / 3;
+}
+
 .article-post-link > a > span > span:first-child {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
@@ -399,7 +403,7 @@ figure {
     grid-row: 1 / 2;
 }
 
-.article-post-link > a[rel="next"]> span > span:first-child {
+.article-post-link > a > span.post-nav-prev > span:first-child {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
 }
