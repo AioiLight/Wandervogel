@@ -73,9 +73,9 @@
                             }
                             });
                             </script>
-                        <div>
-                            <?php previous_post_link( '%link', '<span class="button theme">前: %title</span>'); ?>
-                            <?php next_post_link( '%link', '<span class="button theme">次: %title</span>'); ?>
+                        <div class="article-post-link">
+                            <?php previous_post_link( '%link', '<span class="button theme"><span class="icons icons-navigate-before"></span> <span>%title</span></span>'); ?>
+                            <?php next_post_link( '%link', '<span class="button theme"><span class="icons icons-navigate-next"></span> <span>%title</span></span>'); ?>
                         </div>
                     <?php endif; ?>
                     <?php endwhile; endif; ?>

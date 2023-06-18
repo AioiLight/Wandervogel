@@ -373,6 +373,37 @@ figure {
     margin-inline-end: 1em;
 }
 
+.article-post-link {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.article-post-link > a {
+    display: contents;
+}
+
+.article-post-link > a > span {
+    display: grid;
+    grid-template-columns: 1.25em auto 1.25em;
+    align-items: center;
+    padding-inline: 0.5em;
+}
+
+.article-post-link > a > span > span:first-child {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.article-post-link > a > span > span:last-child {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.article-post-link > a[rel="next"]> span > span:first-child {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
 .wp-block-image img {
     max-width: 100%;
     height: auto;
