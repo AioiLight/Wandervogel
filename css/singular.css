@@ -70,8 +70,9 @@ figure {
     gap: 0.5em;
 }
 
-.post-tags > a{
-    margin-inline-end: 1em;
+.post-tags > span:nth-child(n+3)::before {
+    content: "・";
+    margin-inline: 0.3em;
 }
 
 .wp-block-image img {

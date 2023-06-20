@@ -42,8 +42,8 @@
                                     foreach ( $tags as $tag ) {
                                         $tag_link = get_tag_link( $tag->term_id );
                                                 
-                                        $html .= '<a href="' . $tag_link . '" title="' . $tag->name . '">';
-                                        $html .= $tag->name . '</a>';
+                                        $html .= '<span><a href="' . $tag_link . '" title="' . $tag->name . '">';
+                                        $html .= $tag->name . '</a></span>';
                                     }
                                 }
                                 $html .= '</div>';
