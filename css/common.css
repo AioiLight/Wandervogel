@@ -33,6 +33,7 @@
     scroll-behavior: smooth;
     color-scheme: dark light;
     font-feature-settings: "palt";
+    word-break: break-word;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -120,7 +121,6 @@ h6 {
 }
 
 code {
-    overflow-wrap: break-word;
     background: var(--card-background);
     padding: 0 0.5em;
     border: 2px solid var(--sub-text);
@@ -157,6 +157,7 @@ ul li {
     text-indent: 1em;
     line-height: 1.7em;
     margin: 1.7em 0.2em;
+    text-align: justify;
 }
 
 .index-grid {
@@ -206,7 +207,6 @@ ul li {
     padding-block: 0.5em;
     padding-inline: 1.2em;
     margin: 0.2rem;
-    overflow-wrap: break-word;
     border-radius: var(--radius-large);
     font-weight: bold;
 }
@@ -217,7 +217,6 @@ ul li {
     padding-block: 0.5em;
     padding-inline: 1.2em;
     margin: 0.5rem;
-    overflow-wrap: break-word;
     border-radius: var(--radius-large);
     font-weight: bold;
 }

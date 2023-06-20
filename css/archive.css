@@ -48,7 +48,6 @@
     font-size: 1.2em;
     color: var(--article-card-color);
     background-color: var(--article-card-background);
-    word-break: break-all;
 }
 
 .article-card p {
