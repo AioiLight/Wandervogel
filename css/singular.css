@@ -108,4 +108,8 @@ aside:has(.wp-block-simpletoc-toc) {
         overflow-y: visible;
         scrollbar-gutter: auto;
     }
+
+    .wp-block-table {
+        margin-inline-end: calc(50% - 50vw);
+    }
 }
