@@ -1,8 +1,15 @@
-<?php get_header(); ?>
+<?php 
+$y = get_the_time('Y');
+$m = get_the_time('n');
+get_header(); ?>
         <div class="body">
             <main class="grid-item">
                 <section>
-                    <h1>アーカイブ: <?php wp_title(); ?></h1>
+                    <?php if (is_year()): ?>
+                    <h1><?= $y ?> 年の記事一覧</h1>
+                    <?php else: ?>
+                    <h1><a href="<?= get_year_link($y); ?>"><?= $y ?> 年</a> <?= $m ?> 月の記事一覧</h1>
+                    <?php endif; ?>
 
                     <div class="index-grid header-link">
                         <?php if(have_posts()): while(have_posts()): the_post(); ?>
