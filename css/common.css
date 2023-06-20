@@ -261,6 +261,7 @@ ul li {
 .article-post-link {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 
 .article-post-link > a {
@@ -291,6 +292,11 @@ ul li {
 .article-post-link > a > span.post-nav-prev > span:first-child {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
+}
+
+.no-page {
+    text-align: center;
+    color: var(--sub-text);
 }
 
 .icons {

@@ -74,8 +74,20 @@
                             });
                             </script>
                         <div class="article-post-link">
-                            <?php next_post_link( '%link', '<span class="button theme post-nav-next"><span class="icons icons-navigate-before"></span><span>%title</span></span>'); ?>
-                            <?php previous_post_link( '%link', '<span class="button theme post-nav-prev"><span class="icons icons-navigate-next"></span><span>%title</span></span>'); ?>
+                            <?php 
+                            $next = get_next_post_link( '%link', '<span class="button theme post-nav-next"><span class="icons icons-navigate-before"></span><span>%title</span></span>');
+                            $prev = get_previous_post_link( '%link', '<span class="button theme post-nav-prev"><span class="icons icons-navigate-next"></span><span>%title</span></span>');
+                            ?>
+                            <?php if($next): ?>
+                                <?= $next ?>
+                            <?php else: ?>
+                                <p class="no-page">これより新しい投稿はありません</p>
+                            <?php endif; ?>
+                            <?php if($prev): ?>
+                                <?= $prev ?>
+                            <?php else: ?>
+                                <p class="no-page">これより古い投稿はありません</p>
+                            <?php endif; ?>
                         </div>
                     <?php endif; ?>
                     <?php endwhile; endif; ?>
