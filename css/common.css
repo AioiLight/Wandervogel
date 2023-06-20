@@ -142,6 +142,10 @@ ul li {
     margin: 0.5em 0em;
 }
 
+.ib {
+    display: inline-block;
+}
+
 .header-link a{
     color: var(--main-text);
     text-decoration-line: none;

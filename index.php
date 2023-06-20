@@ -81,12 +81,12 @@
                             <?php if($next): ?>
                                 <?= $next ?>
                             <?php else: ?>
-                                <p class="no-page">これより新しい投稿はありません</p>
+                                <p class="no-page">これより新しい投稿は<span class="ib">ありません</span></p>
                             <?php endif; ?>
                             <?php if($prev): ?>
                                 <?= $prev ?>
                             <?php else: ?>
-                                <p class="no-page">これより古い投稿はありません</p>
+                                <p class="no-page">これより古い投稿は<span class="ib">ありません</span></p>
                             <?php endif; ?>
                         </div>
                     <?php endif; ?>
