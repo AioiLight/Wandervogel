@@ -32,6 +32,7 @@
 
     scroll-behavior: smooth;
     color-scheme: dark light;
+    font-feature-settings: "palt";
 }
 
 @media (prefers-color-scheme: dark) {
@@ -244,7 +245,7 @@ figure {
 }
 
 .article-card::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     width: 100%;
