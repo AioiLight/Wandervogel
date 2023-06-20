@@ -170,6 +170,10 @@ ul li {
     min-width: 10rem;
 }
 
+.side aside {
+    margin-block-end: 1rem;
+}
+
 .side ul {
     list-style: none;
     padding: 0;
