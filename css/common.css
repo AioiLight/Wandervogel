@@ -168,6 +168,8 @@ ul li {
 
 .side {
     min-width: 10rem;
+    display: grid;
+    gap: 1rem;
 }
 
 .side ul {
