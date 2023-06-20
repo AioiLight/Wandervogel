@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+.article-card {
+    background-color: var(--card-background);
+    box-shadow: 0px 2px 2px var(--shadow);
+    border-radius: var(--radius-midium);
+    height: 22rem;
+    overflow: hidden;
+    position: relative;
+    transition: opacity 0.5s;
+}
+
+.article-card::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, var(--card-background) 0%, transparent 20%);
+    pointer-events: none;
+}
+
+.article-card:hover {
+    opacity: 0.75;
+}
+
+.article-card:hover img {
+    transform: scale(1.05);
+}
+
+.article-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.article-card h1, .article-card h2{
+    position: relative;
+    margin: 0;
+    margin-bottom: 0.25em;
+    padding: 0.25em var(--heading-padding);
+    border: none;
+    font-size: 1.2em;
+    color: var(--article-card-color);
+    background-color: var(--article-card-background);
+    word-break: break-all;
+}
+
+.article-card p {
+    margin: 0 0.5rem;
+    color: var(--sub-text);
+}

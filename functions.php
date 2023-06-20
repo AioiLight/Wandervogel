@@ -27,7 +27,15 @@ add_filter( 'big_image_size_threshold', '__return_false' );
 add_action("wp_enqueue_scripts", function () {
 	wp_dequeue_style( 'global-styles' );
 
-	wp_enqueue_style( 'wandervogel-common', get_stylesheet_directory_uri() . '/css/common.css', array(), '4.0');
+	wp_enqueue_style( 'wandervogel-common', get_stylesheet_directory_uri() . '/css/common.css', array(), '4.1');
+
+	if (is_archive() || is_home()) {
+		wp_enqueue_style( 'wandervogel-archive', get_stylesheet_directory_uri() . '/css/archive.css', array(), '4.1');
+	}
+
+	if (is_singular()) {
+		wp_enqueue_style( 'wandervogel-singular', get_stylesheet_directory_uri() . '/css/singular.css', array(), '4.1');
+	}
 });
 
 // get the description
