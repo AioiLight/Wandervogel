@@ -346,6 +346,22 @@ ul li {
     word-break: break-all;
 }
 
+.wp-block-search__input {
+    padding: 1em;
+    background: var(--body-background);
+    color: var(--main-text);
+    border-radius: var(--radius-small);
+    border: 1px solid var(--sub-text);
+    outline: transparent solid 3px;
+    transition: .25s;
+    transition-property: outline, border;
+}
+
+.wp-block-search__input:focus-visible {
+    outline: var(--theme-color) solid 3px;
+    border: 1px solid transparent;
+}
+
 @media (max-width: 1024px) {
     :root {
         --grid-margin: 1rem;
