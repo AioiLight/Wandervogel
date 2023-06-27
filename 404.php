@@ -1,5 +1,4 @@
 <?php 
-header("HTTP/1.1 404 Not Found");
 get_header(); ?>
         <div class="body">
             <main class="grid-item">
