@@ -29,7 +29,7 @@ add_action("wp_enqueue_scripts", function () {
 
 	wp_enqueue_style( 'wandervogel-common', get_stylesheet_directory_uri() . '/css/common.css', array(), '20230627');
 
-	if (is_archive() || is_home()) {
+	if (is_archive() || is_home() || is_search()) {
 		wp_enqueue_style( 'wandervogel-archive', get_stylesheet_directory_uri() . '/css/archive.css', array(), '20230627');
 	}
 
