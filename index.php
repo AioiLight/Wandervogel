@@ -7,15 +7,12 @@
                         <a href="<?php the_permalink( $post ); ?>">
                             <article class="article-card">
                                 <?php if (has_post_thumbnail()) : ?>
-                                    <img src="<?php
-                                    $tid = get_post_thumbnail_id();
-                                    $timg = wp_get_attachment_image_src($tid, 'medium');
-                                    echo $timg[0];?>"<?php if($count >= 4): ?> loading="lazy"<?php endif; ?>>
+                                    <?= the_post_thumbnail('medium', array('loading' => ($count >= 4) ? 'lazy' : false)); ?>
                                 <?php else: ?>
                                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/eyecatch.png"<?php if($count >= 4): ?> loading="lazy"<?php endif; ?>>
                                 <?php endif; ?>
                                 <h1><?php the_title(); ?></h1>
-                                <p><?php the_excerpt(); ?></p>
+                                <?php the_excerpt(); ?>
                             </article>
                         </a>
                         <?php $count++; endwhile; endif; ?>
