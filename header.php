@@ -1,5 +1,6 @@
 <?php 
 $desc = get_pages_description();
+$thumb = is_singular() && has_post_thumbnail() ? wp_get_attachment_image_src( get_post_thumbnail_id(), 'full')[0] : get_stylesheet_directory_uri() . '/images/eyecatch.png';
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -12,11 +13,49 @@ $desc = get_pages_description();
         <meta property="og:title" content="<?php wp_title('|', true, 'right'); bloginfo( 'name' ); ?>">
         <meta property="og:type" content="<?php echo (is_front_page() || is_home()) ? 'website' : 'article'; ?>">
         <meta property="og:description" content="<?= $desc ?>">
-        <meta property="og:image" content="<?php echo is_singular() && has_post_thumbnail() ? wp_get_attachment_image_src( get_post_thumbnail_id(), 'full')[0] : get_stylesheet_directory_uri() . '/images/eyecatch.png'; ?>">
+        <meta property="og:image" content="<?= $thumb; ?>">
         
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@aioilight">
         <meta property="og:locale" content="ja_JP">
+
+        <script type="application/ld+json">
+        [
+            <?php if (is_singular()): ?>
+            {
+                "@context": "https://schema.org",
+                "@type": "BlogPosting",
+                "headline": "<?php the_title(); ?>",
+                "image": [
+                    "<?= $thumb ?>"
+                ],
+                "datePublished": "<?= get_the_date('c') ?>",
+                "dateModified": "<?= get_the_modified_date('c') ?>",
+                "author": [
+                    {
+                        "@type": "Person",
+                        "name": "AioiLight",
+                        "url": "https://wangel.aioilight.space/?pagename=about"
+                    }
+                ],
+                "description": "<?= $desc; ?>"
+            },
+            <?php endif; ?>
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "url": "https://wangel.aioilight.space/",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": "https://wangel.aioilight.space/?s={s}"
+                    },
+                    "query-input": "required name=s"
+                }
+            }
+        ]
+        </script>
 
         <link rel="alternate" href="<?php bloginfo('atom_url'); ?>" type="application/atom+xml" title="<?php bloginfo( 'name' ); ?> のフィード" />
         <?php wp_head(); ?>
