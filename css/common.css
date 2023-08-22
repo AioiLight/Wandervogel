@@ -88,28 +88,28 @@ h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: calc(2.0em * var(--heading-size));
+    font-size: calc(1.8em * var(--heading-size));
 }
 
 h2 {
-    font-size: calc(1.8em * var(--heading-size));
+    font-size: calc(1.6em * var(--heading-size));
     border-left: 0.7rem solid var(--onepoint-color);
 }
 
 h3 {
-    font-size: calc(1.6em * var(--heading-size));
+    font-size: calc(1.4em * var(--heading-size));
     border-left: 0.5rem solid var(--onepoint-color);
     text-indent: 0.5em;
 }
 
 h4 {
-    font-size: calc(1.4em * var(--heading-size));
+    font-size: calc(1.3em * var(--heading-size));
     border-left: 0.25rem solid var(--onepoint-color);
     text-indent: 1em;
 }
 
 h5 {
-    font-size: calc(1.25em * var(--heading-size));
+    font-size: calc(1.2em * var(--heading-size));
     border-left: 0.2rem solid var(--onepoint-color);
     text-indent: 1.5em;
 }
