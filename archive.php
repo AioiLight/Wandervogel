@@ -19,6 +19,7 @@ get_header(); $count = 0; ?>
                                 <?= the_post_thumbnail('medium', array('loading' => ($count >= 4) ? 'lazy' : false)); ?>
                                 <?php else: ?>
                                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/eyecatch.png"<?php if($count >= 4): ?> loading="lazy"<?php endif; ?>>
+                                <?php endif; ?>
                                 <div>
                                     <h2><?php the_title(); ?></h2>
                                     <?php the_excerpt(); ?>
