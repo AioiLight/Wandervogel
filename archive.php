@@ -1,7 +1,7 @@
 <?php 
 $y = get_the_time('Y');
 $m = get_the_time('n');
-get_header(); ?>
+get_header(); $count = 0; ?>
         <div class="body">
             <main class="grid-item">
                 <section>
@@ -16,20 +16,16 @@ get_header(); ?>
                         <a href="<?php the_permalink( $post ); ?>">
                             <article class="article-card">
                                 <?php if (has_post_thumbnail()) : ?>
-                                    <img src="<?php
-                                    $tid = get_post_thumbnail_id();
-                                    $timg = wp_get_attachment_image_src($tid, 'medium');
-                                    echo $timg[0];?>" loading="lazy">
+                                <?= the_post_thumbnail('medium', array('loading' => ($count >= 4) ? 'lazy' : false)); ?>
                                 <?php else: ?>
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/eyecatch.png" loading="lazy">
-                                <?php endif; ?>
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/eyecatch.png"<?php if($count >= 4): ?> loading="lazy"<?php endif; ?>>
                                 <div>
                                     <h2><?php the_title(); ?></h2>
-                                    <p><?php the_excerpt(); ?></p>
+                                    <?php the_excerpt(); ?>
                                 </div>
                             </article>
                         </a>
-                        <?php endwhile; endif; ?>
+                        <?php $count++; endwhile; endif; ?>
                     </div>
                 </section>
 

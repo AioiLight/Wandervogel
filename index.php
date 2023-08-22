@@ -7,7 +7,7 @@
                         <a href="<?php the_permalink( $post ); ?>">
                             <article class="article-card">
                                 <?php if (has_post_thumbnail()) : ?>
-                                    <?= the_post_thumbnail('medium', array('loading' => ($count >= 4) ? 'lazy' : false)); ?>
+                                <?= the_post_thumbnail('medium', array('loading' => ($count >= 4) ? 'lazy' : false)); ?>
                                 <?php else: ?>
                                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/eyecatch.png"<?php if($count >= 4): ?> loading="lazy"<?php endif; ?>>
                                 <?php endif; ?>
