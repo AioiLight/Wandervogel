@@ -52,7 +52,11 @@
                     </article>
                     <?php if (is_single()) : ?>
                         <div>
-                            <div class="post-date"><span>作成: <time><?php echo get_the_date(); ?></time></span> <span>更新: <time><?php the_modified_date(); ?></time></span></div>
+                            <?php 
+                            $created = explode('/', get_the_date('Y/n/j'));
+                            $modified = explode('/', get_the_modified_date('Y/n/j'));
+                            ?>
+                            <div class="post-date"><span>作成: <time datetime="<?= sprintf('%d-%02d-%02d', $created[0], $created[1], $created[2]); ?>"><?= sprintf('%d 年 %d 月 %d 日', $created[0], $created[1], $created[2]); ?></time></span> <span>更新: <time datetime="<?= sprintf('%d-%02d-%02d', $modified[0], $modified[1], $modified[2]); ?>"><?= sprintf('%d 年 %d 月 %d 日', $modified[0], $modified[1], $modified[2]); ?></time></span></div>
                             <span id="sharing" class="button theme" style="cursor: pointer;"><span class="icons icons-share"></span> ブログ記事を共有</span>
                             <script>
                             const shareData = {
