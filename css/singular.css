@@ -52,11 +52,14 @@ figure {
     margin: 1rem;
 }
 
-.post-info {
+.post-info-col {
+    margin-block-end: 2.5em;
+}
+
+.post-info-row {
     color: var(--sub-text);
     display: flex;
     line-height: 2.5;
-    margin-block-end: 2rem;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1em;

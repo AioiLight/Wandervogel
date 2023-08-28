@@ -239,7 +239,6 @@ ul li {
     text-align: center;
     padding-block: 0.5em;
     padding-inline: 1.2em;
-    margin: 0.5rem;
     border-radius: var(--radius-large);
     font-weight: bold;
 }
@@ -268,6 +267,7 @@ ul li {
 .article-post-link {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 16px;
 }
 
 .article-post-link > a {
@@ -344,6 +344,11 @@ ul li {
     -webkit-mask-image: url(../icons/share.svg);
 }
 
+.icons-edit-calendar {
+    mask-image: url(../icons/edit-calendar.svg);
+    -webkit-mask-image: url(../icons/edit-calendar.svg);
+}
+
 .url-text {
     word-break: break-all;
 }
@@ -362,6 +367,13 @@ ul li {
 .wp-block-search__input:focus-visible {
     outline: var(--theme-color) solid 3px;
     border: 1px solid transparent;
+}
+
+.article-footer {
+    padding-block: 32px;
+    display: grid;
+    gap: 16px;
+    justify-items: start;
 }
 
 @media (max-width: 1024px) {

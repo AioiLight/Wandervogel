@@ -24,39 +24,44 @@
                     <article>
                         <h1 class="post-title"><?php the_title(); ?></h1>
 
-                        <div class="post-info">                            
-                            <?php
-                                $category = get_the_category();
-                                $html = '<div class="post-category"><span class="icons icons-folder-open"></span> ';
-                                $html .= '<a href="' . get_category_link( $category[0]-> term_id ) . '" title="' . $category[0]->cat_name . '">';
-                                $html .= $category[0]->cat_name . '</a></div>';
-                                echo $html;
-                            ?>
-                            <?php
-                                $tags = get_the_tags();
-                                $html = '<div class="post-tags"><span class="icons icons-label"></span> ';
-                                if ( $tags ) {
-                                    foreach ( $tags as $tag ) {
-                                        $tag_link = get_tag_link( $tag->term_id );
-                                                
-                                        $html .= '<span><a href="' . $tag_link . '" title="' . $tag->name . '">';
-                                        $html .= $tag->name . '</a></span>';
+                        <div class="post-info-col">
+                            <div class="post-info-row">                            
+                                <?php
+                                    $category = get_the_category();
+                                    $html = '<div class="post-category"><span class="icons icons-folder-open"></span> ';
+                                    $html .= '<a href="' . get_category_link( $category[0]-> term_id ) . '" title="' . $category[0]->cat_name . '">';
+                                    $html .= $category[0]->cat_name . '</a></div>';
+                                    echo $html;
+                                ?>
+                                <?php
+                                    $tags = get_the_tags();
+                                    $html = '<div class="post-tags"><span class="icons icons-label"></span> ';
+                                    if ( $tags ) {
+                                        foreach ( $tags as $tag ) {
+                                            $tag_link = get_tag_link( $tag->term_id );
+                                                    
+                                            $html .= '<span><a href="' . $tag_link . '" title="' . $tag->name . '">';
+                                            $html .= $tag->name . '</a></span>';
+                                        }
                                     }
-                                }
-                                $html .= '</div>';
-                                echo $html;
-                            ?>
+                                    $html .= '</div>';
+                                    echo $html;
+                                ?>
+                            </div>
+                            <div class="post-info-row">
+                            <?php 
+                                $created = explode('/', get_the_date('Y/n/j'));
+                                $modified = explode('/', get_the_modified_date('Y/n/j'));
+                                $month_link = get_month_link($created[0], $created[1]);
+                                ?>
+                                <span><span class="icons icons-edit-calendar"></span> <time datetime="<?= sprintf('%d-%02d-%02d', $created[0], $created[1], $created[2]); ?>"><?= sprintf('<a href="' . $month_link . '">%d 年 %d 月</a> %d 日', $created[0], $created[1], $created[2]); ?></time> (更新: <time datetime="<?= sprintf('%d-%02d-%02d', $modified[0], $modified[1], $modified[2]); ?>"><?= sprintf('%d 年 %d 月 %d 日', $modified[0], $modified[1], $modified[2]); ?></time>)</span>
+                            </div>
                         </div>
 
                         <?php the_content(); ?>
                     </article>
                     <?php if (is_single()) : ?>
-                        <div>
-                            <?php 
-                            $created = explode('/', get_the_date('Y/n/j'));
-                            $modified = explode('/', get_the_modified_date('Y/n/j'));
-                            ?>
-                            <div class="post-date"><span>作成: <time datetime="<?= sprintf('%d-%02d-%02d', $created[0], $created[1], $created[2]); ?>"><?= sprintf('%d 年 %d 月 %d 日', $created[0], $created[1], $created[2]); ?></time></span> <span>更新: <time datetime="<?= sprintf('%d-%02d-%02d', $modified[0], $modified[1], $modified[2]); ?>"><?= sprintf('%d 年 %d 月 %d 日', $modified[0], $modified[1], $modified[2]); ?></time></span></div>
+                        <div class="article-footer">
                             <span id="sharing" class="button theme" style="cursor: pointer;"><span class="icons icons-share"></span> ブログ記事を共有</span>
                             <script>
                             const shareData = {
