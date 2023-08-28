@@ -17,8 +17,9 @@
                         </a>
                         <?php $count++; endwhile; endif; ?>
                     </div>
-
-                    <?php get_template_part( 'parts/post-nav' ); ?>
+                    <div class="article-footer">
+                        <?php get_template_part( 'parts/post-nav' ); ?>
+                    </div>
                 <?php else: ?>
                     <?php if(have_posts()): while(have_posts()): the_post(); ?>
                     <article>
@@ -62,7 +63,7 @@
                     </article>
                     <?php if (is_single()) : ?>
                         <div class="article-footer">
-                            <span id="sharing" class="button theme" style="cursor: pointer;"><span class="icons icons-share"></span> ブログ記事を共有</span>
+                            <span id="sharing" class="button theme"><span class="icons icons-share"></span> ブログ記事を共有</span>
                             <script>
                             const shareData = {
                                 title: '<?php bloginfo( 'name' ); ?>',

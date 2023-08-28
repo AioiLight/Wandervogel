@@ -373,7 +373,11 @@ ul li {
     padding-block: 32px;
     display: grid;
     gap: 16px;
-    justify-items: start;
+}
+
+.article-footer > #sharing {
+    cursor: pointer;
+    justify-self: start;
 }
 
 @media (max-width: 1024px) {
