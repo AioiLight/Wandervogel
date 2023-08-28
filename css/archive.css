@@ -8,6 +8,7 @@
     overflow: hidden;
     position: relative;
     transition: opacity 0.5s;
+    transition-timing-function: var(--easing);
 }
 
 .article-card::after {
@@ -37,6 +38,7 @@
     aspect-ratio: 16 / 9;
     object-fit: cover;
     transition: transform 0.5s;
+    transition-timing-function: var(--easing);
 }
 
 .article-card h1, .article-card h2{

@@ -30,6 +30,8 @@
     --heading-padding: 1rem;
     --heading-size: 1.0;
 
+    --easing: cubic-bezier(.22,.9,.28,.98);
+
     scroll-behavior: smooth;
     color-scheme: dark light;
     font-feature-settings: "palt";
