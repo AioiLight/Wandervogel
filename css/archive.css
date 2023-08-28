@@ -9,6 +9,7 @@
     position: relative;
     transition: opacity 0.5s;
     transition-timing-function: var(--easing);
+    border: 2px solid #444;
 }
 
 .article-card::after {
