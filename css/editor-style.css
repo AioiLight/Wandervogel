@@ -68,6 +68,13 @@ body {
     box-sizing: border-box;
 }
 
+p {
+    text-indent: 1em;
+    line-height: 1.7em;
+    margin: 1.7em 0.2em;
+    text-align: justify;
+}
+
 h1 {
     padding: 1em var(--heading-padding);
     margin: 0.25em calc(var(--grid-margin) * -1);
