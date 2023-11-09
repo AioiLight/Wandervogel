@@ -124,6 +124,6 @@ aside:has(.wp-block-simpletoc-toc) {
 
     .simpletoc-list li:has(a.current) {
         background: none;
-        font-weight: 500;
+        font-weight: 400;
     }
 }
