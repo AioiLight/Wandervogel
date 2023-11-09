@@ -98,6 +98,11 @@ aside:has(.wp-block-simpletoc-toc) {
     scrollbar-gutter: stable;
 }
 
+.simpletoc-list li:has(a.current) {
+    background: var(--button-color);
+    font-weight: bold;
+}
+
 @media screen and (max-width: 1024px) {
     figure {
         margin: 0.5rem;
@@ -115,5 +120,10 @@ aside:has(.wp-block-simpletoc-toc) {
 
     .wp-block-table {
         margin-inline-end: calc(50% - 50vw);
+    }
+
+    .simpletoc-list li:has(a.current) {
+        background: none;
+        font-weight: 500;
     }
 }
