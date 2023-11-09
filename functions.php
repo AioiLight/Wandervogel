@@ -35,6 +35,8 @@ add_action("wp_enqueue_scripts", function () {
 
 	if (is_singular()) {
 		wp_enqueue_style( 'wandervogel-singular', get_stylesheet_directory_uri() . '/css/singular.css', array(), '20230829');
+
+		wp_enqueue_script( 'wandervogel-share', get_stylesheet_directory_uri() . '/js/share.js', array(), '20231109', array( 'strategy' => 'defer', 'in_footer' => false));
 	}
 });
 

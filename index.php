@@ -64,22 +64,6 @@
                     <?php if (is_single()) : ?>
                         <div class="article-footer">
                             <span id="sharing" class="button theme"><span class="icons icons-share"></span> ブログ記事を共有</span>
-                            <script>
-                            const shareData = {
-                                title: '<?php bloginfo( 'name' ); ?>',
-                                text: '<?php the_title(); ?>',
-                                url: '<?php the_permalink(); ?>',
-                                }
-
-                            const btn = document.querySelector('#sharing');
-
-                            btn.addEventListener('click', async () => {
-                            try {
-                                await navigator.share(shareData)
-                            } catch(err) {
-                            }
-                            });
-                            </script>
                             <div class="article-post-link">
                                 <?php 
                                 $next = get_next_post_link( '%link', '<span class="button theme post-nav-next"><span class="icons icons-navigate-before"></span><span>%title</span></span>');
