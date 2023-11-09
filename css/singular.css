@@ -98,7 +98,7 @@ aside:has(.wp-block-simpletoc-toc) {
     scrollbar-gutter: stable;
 }
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     figure {
         margin: 0.5rem;
     }

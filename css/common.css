@@ -281,10 +281,6 @@ ul li {
     padding-inline: 0.5em;
 }
 
-.article-post-link > a > span.post-nav-prev {
-    grid-column: 2 / 3;
-}
-
 .article-post-link > a > span > span:first-child {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
@@ -380,7 +376,7 @@ ul li {
     justify-self: start;
 }
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     :root {
         --grid-margin: 1rem;
 
@@ -395,8 +391,19 @@ ul li {
     .body {
         grid-template-columns: 1fr;
     }
+}
 
+@media screen and (max-width: 600px) {
     .article-post-link {
-        margin-inline: calc(-1 * var(--grid-margin));
+        grid-template-columns: 1fr;
+    }
+    
+    .post-nav-next {
+        margin-inline-end: 15%;
+    }
+    
+    .post-nav-prev {
+        margin-inline-start: 15%;
+        
     }
 }
