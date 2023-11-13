@@ -94,8 +94,16 @@ aside:has(.wp-block-simpletoc-toc) {
 
 .simpletoc-list {
     max-height: 80vh;
+    overflow-x: clip;
     overflow-y: scroll;
     scrollbar-gutter: stable;
+}
+
+.simpletoc-list li > a {
+    transition-duration: 0.5s;
+    transition-timing-function: var(--easing);
+    transition-property: background-color;
+    display: block;
 }
 
 .simpletoc-list li > a.current {
