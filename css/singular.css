@@ -98,7 +98,7 @@ aside:has(.wp-block-simpletoc-toc) {
     scrollbar-gutter: stable;
 }
 
-.simpletoc-list li:has(a.current) {
+.simpletoc-list li > a.current {
     background: var(--button-color);
     font-weight: bold;
 }
@@ -122,7 +122,7 @@ aside:has(.wp-block-simpletoc-toc) {
         margin-inline-end: calc(50% - 50vw);
     }
 
-    .simpletoc-list li:has(a.current) {
+    .simpletoc-list li > a.current {
         background: none;
         font-weight: 400;
     }
