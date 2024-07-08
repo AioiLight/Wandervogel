@@ -41,6 +41,7 @@
 
                     <?php the_content(); ?>
                 </article>
+                <?php get_template_part( 'parts/author-info' ); ?>
                 <div class="article-footer">
                     <span id="sharing" class="button theme"><span class="icons icons-share"></span> ブログ記事を共有</span>
                     <div class="article-post-link">
