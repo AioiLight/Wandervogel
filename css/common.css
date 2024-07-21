@@ -42,6 +42,9 @@
     color-scheme: dark light;
     font-feature-settings: "palt";
     overflow-wrap: break-word;
+    font-size: 100%;
+    font-weight: 400;
+    font-family: sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -71,9 +74,6 @@
 body {
     background-color: var(--background);
     color: var(--main-text);
-    font-size: 1rem;
-    font-weight: 400;
-    font-family: sans-serif;
     margin: 0 auto;
     padding: 2rem;
     max-width: 1920px;
@@ -147,7 +147,11 @@ a:hover {
     text-decoration: underline;
 }
 
-ul li {
+ul, ol {
+    list-style-position: inside;
+}
+
+li {
     margin: 0.5em 0em;
 }
 
@@ -168,8 +172,8 @@ ul li {
 
 .grid-item > article p {
     text-indent: 1em;
-    line-height: 1.7em;
-    margin: 1.7em 0.2em;
+    line-height: 1.7;
+    margin: 1.7em 0;
     text-align: justify;
 }
 
@@ -251,6 +255,9 @@ ul li {
     padding-inline: 1.2em;
     border-radius: var(--radius-large);
     font-weight: bold;
+    border: 0;
+    font-size: 1em;
+    cursor: pointer;
 }
 
 .theme {
@@ -382,7 +389,6 @@ ul li {
 }
 
 .article-footer > #sharing {
-    cursor: pointer;
     justify-self: start;
 }
 
