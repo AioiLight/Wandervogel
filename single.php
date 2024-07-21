@@ -43,7 +43,7 @@
                 </article>
                 <?php get_template_part( 'parts/author-info' ); ?>
                 <div class="article-footer">
-                    <span id="sharing" class="button theme"><span class="icons icons-share"></span> ブログ記事を共有</span>
+                    <button id="sharing" class="button theme"><span class="icons icons-share"></span> ブログ記事を共有</button>
                     <div class="article-post-link">
                         <?php 
                         $next = get_next_post_link( '%link', '<span class="button theme post-nav-next"><span class="icons icons-navigate-before"></span><span>%title</span></span>');
