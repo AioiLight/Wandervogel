@@ -20,6 +20,9 @@ register_sidebar(array(
 // eyecatch
 add_theme_support( 'post-thumbnails' );
 
+// html5 support
+add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
+
 // disable image scalling
 add_filter( 'big_image_size_threshold', '__return_false' );
 
