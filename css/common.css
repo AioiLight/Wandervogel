@@ -152,6 +152,10 @@ li {
     margin: 0.5em 0em;
 }
 
+:is(ul, ol) :is(ul, ol) {
+    margin-inline-start: 0.75em;
+}
+
 .ib {
     display: inline-block;
 }
