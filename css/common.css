@@ -392,7 +392,7 @@ li {
     justify-self: start;
 }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
     :root {
         --grid-margin: 1rem;
 
@@ -409,7 +409,7 @@ li {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
     .article-post-link {
         grid-template-columns: 1fr;
     }
