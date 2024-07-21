@@ -179,6 +179,10 @@ aside:has(.wp-block-simpletoc-toc) {
 }
 
 @media (max-width: 600px) {
+    .wp-block-post-featured-image {
+        margin-inline: calc(var(--dimen-outer-inline-padding) * -1);
+    }
+    
     .post-info-col {
         padding-block-end: 16px;
     }
