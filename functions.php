@@ -35,8 +35,6 @@ add_action("wp_enqueue_scripts", function () {
 	wp_enqueue_script( 'wandervogel-js-common', get_stylesheet_directory_uri() . '/js/common.js', array(), '20240822', array( 'strategy' => 'defer', 'in_footer' => false));
 
 	if (is_archive() || is_home() || is_search()) {
-		wp_dequeue_style( 'wp-block-library');
-
 		wp_enqueue_style( 'wandervogel-archive', get_stylesheet_directory_uri() . '/css/archive.css', array(), '20240722');
 	}
 
