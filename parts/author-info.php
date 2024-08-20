@@ -8,6 +8,6 @@
                     <div class="author-info-desc">
                         <p>Web とか Android とかをやってる人。アニメ・ゲームが好きなはずなのに消費しきれない毎日。</p>
                         <p class="author-info-desc__follow-me">Follow me!</p>
-                        <p><a href="https://x.com/aioilight" target="_blank">Twitter (@aioilight)</a></p>
+                        <p><a href="https://x.com/aioilight" target="_blank" data-gtm-click="click_author_twitter">Twitter (@aioilight)</a></p>
                     </div>
                 </div>
