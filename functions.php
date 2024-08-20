@@ -30,7 +30,7 @@ add_filter( 'big_image_size_threshold', '__return_false' );
 add_action("wp_enqueue_scripts", function () {
 	wp_dequeue_style( 'global-styles' );
 
-	wp_enqueue_style( 'wandervogel-common', get_stylesheet_directory_uri() . '/css/common.css', array(), '20240722');
+	wp_enqueue_style( 'wandervogel-common', get_stylesheet_directory_uri() . '/css/common.css', array(), '20240820');
 
 	wp_enqueue_script( 'wandervogel-js-common', get_stylesheet_directory_uri() . '/js/common.js', array(), '20240822', array( 'strategy' => 'defer', 'in_footer' => false));
 
