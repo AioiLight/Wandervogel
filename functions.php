@@ -1,12 +1,15 @@
 <?php
+// remove emoji styles
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles', 'print_emoji_styles', 10 );
 // Sidebar
 register_sidebar(array(
-			'name'=>'Archive Sidebar',
-			'id' => 'archive-sidebar',
-			'before_widget'=>'<aside>',
-			'after_widget'=>'</aside>',
-			'before_title' => '<h2 class="sidebar-title">',
-			'after_title' => '</h2>'
+	'name'=>'Archive Sidebar',
+	'id' => 'archive-sidebar',
+	'before_widget'=>'<aside>',
+	'after_widget'=>'</aside>',
+	'before_title' => '<h2 class="sidebar-title">',
+	'after_title' => '</h2>'
 ));
 register_sidebar(array(
 	'name'=>'Article Sidebar',
