@@ -29,10 +29,11 @@ add_filter( 'big_image_size_threshold', '__return_false' );
 // delete inline css
 add_action("wp_enqueue_scripts", function () {
 	wp_dequeue_style( 'global-styles' );
+	wp_dequeue_style( 'wp-block-library');
 
 	wp_enqueue_style( 'wandervogel-common', get_stylesheet_directory_uri() . '/css/common.css', array(), '20240722');
 
-	wp_enqueue_script( 'wandervogel-js-common', get_stylesheet_directory_uri() . '/js/common.js', array(), '20240821', array( 'strategy' => 'defer', 'in_footer' => false));
+	wp_enqueue_script( 'wandervogel-js-common', get_stylesheet_directory_uri() . '/js/common.js', array(), '20240822', array( 'strategy' => 'defer', 'in_footer' => false));
 
 	if (is_archive() || is_home() || is_search()) {
 		wp_enqueue_style( 'wandervogel-archive', get_stylesheet_directory_uri() . '/css/archive.css', array(), '20240722');
@@ -41,7 +42,7 @@ add_action("wp_enqueue_scripts", function () {
 	if (is_singular()) {
 		wp_enqueue_style( 'wandervogel-singular', get_stylesheet_directory_uri() . '/css/singular.css', array(), '20240722');
 
-		wp_enqueue_script( 'wandervogel-share', get_stylesheet_directory_uri() . '/js/share.js', array(), '20240808', array( 'strategy' => 'defer', 'in_footer' => false));
+		wp_enqueue_script( 'wandervogel-share', get_stylesheet_directory_uri() . '/js/share.js', array(), '20240820', array( 'strategy' => 'defer', 'in_footer' => false));
 
 		wp_enqueue_script( 'wandervogel-heading', get_stylesheet_directory_uri() . '/js/heading.js', array(), '20231109', array( 'strategy' => 'defer', 'in_footer' => false));
 	}

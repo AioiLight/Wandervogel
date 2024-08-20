@@ -1,6 +1,6 @@
 const shareData = {
     title: 'Wangel',
-    text: document.querySelector(".post-title").textContent,
+    text: document.title,
     url: location.href,
 };
 

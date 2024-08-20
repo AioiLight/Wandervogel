@@ -1,11 +1,13 @@
-document.querySelectorAll('[data-gtm-click]').forEach((e) => {
+document.querySelectorAll('[data-gtag-click]').forEach((e) => {
     e.addEventListener('click', (event) => {
         if (typeof gtag !== 'function') {
             return;
         }
         event.preventDefault();
         const href = e.getAttribute('href');
-        gtag('event', e.getAttribute('data-gtm-click'), {
+        gtag('event', e.getAttribute('data-gtag-click'), {
+            'page_location': location.href,
+            'page_title': document.title,
             'link_classes': e.className,
             'link_id': e.id,
             'link_text': e.textContent || '',
@@ -28,6 +30,8 @@ document.querySelectorAll('a[href^="https://wangel.aioilight.space"]').forEach((
         event.preventDefault();
         const href = e.getAttribute('href');
         gtag('event', 'click_internal', {
+            'page_location': location.href,
+            'page_title': document.title,
             'link_classes': e.className,
             'link_id': e.id,
             'link_text': e.textContent || '',
