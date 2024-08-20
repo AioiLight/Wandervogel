@@ -14,7 +14,8 @@ document.querySelectorAll('[data-gtm-click]').forEach((e) => {
                 if (href) {
                     location.href = href;
                 }
-            }
+            },
+            'event_timeout': 500
         });
     }, { passive: false });
 });
@@ -35,7 +36,8 @@ document.querySelectorAll('a[href^="https://wangel.aioilight.space"]').forEach((
                 if (href) {
                     location.href = href;
                 }
-            }
+            },
+            'event_timeout': 500
         });
     }, { passive: false });
 });

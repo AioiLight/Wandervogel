@@ -32,7 +32,7 @@ add_action("wp_enqueue_scripts", function () {
 
 	wp_enqueue_style( 'wandervogel-common', get_stylesheet_directory_uri() . '/css/common.css', array(), '20240722');
 
-	wp_enqueue_script( 'wandervogel-js-common', get_stylesheet_directory_uri() . '/js/common.js', array(), '20240820', array( 'strategy' => 'defer', 'in_footer' => false));
+	wp_enqueue_script( 'wandervogel-js-common', get_stylesheet_directory_uri() . '/js/common.js', array(), '20240821', array( 'strategy' => 'defer', 'in_footer' => false));
 
 	if (is_archive() || is_home() || is_search()) {
 		wp_enqueue_style( 'wandervogel-archive', get_stylesheet_directory_uri() . '/css/archive.css', array(), '20240722');
