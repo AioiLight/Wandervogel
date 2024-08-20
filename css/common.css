@@ -130,7 +130,6 @@ code {
     padding: 0 0.5em;
     border: 2px solid var(--sub-text);
     border-radius: var(--radius-small);
-    user-select: all;
     word-break: break-all;
 }
 
