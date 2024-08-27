@@ -62,6 +62,7 @@ $thumb = is_singular() && has_post_thumbnail() ? wp_get_attachment_image_src( ge
     </head>
 
     <body <?php body_class(); ?>>
+        <?php wp_body_open(); ?>        
         <header>
             <div class="blog-title header-link"><a href="<?php bloginfo('url'); ?>" data-gtag-click="click_gototop"><?php bloginfo( 'name' ); ?></a></div>
             <p class="blog-description"><?php bloginfo( 'description' ); ?></p>
