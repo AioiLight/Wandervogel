@@ -18,6 +18,9 @@ $thumb = is_singular() && has_post_thumbnail() ? wp_get_attachment_image_src( ge
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@aioilight">
         <meta property="og:locale" content="ja_JP">
+        <?php if (is_tag() && get_queried_object()->count <= 5): ?>
+        <meta name="robots" content="noindex">
+        <?php endif; ?>
 
         <script type="application/ld+json">
         [
