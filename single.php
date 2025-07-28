@@ -37,6 +37,11 @@
                             ?>
                             <span><span class="icons icons-edit-calendar"></span> <time datetime="<?= sprintf('%d-%02d-%02d', $created[0], $created[1], $created[2]); ?>"><?= sprintf('<a href="' . $month_link . '">%d 年 %d 月</a> %d 日', $created[0], $created[1], $created[2]); ?></time> (更新: <time datetime="<?= sprintf('%d-%02d-%02d', $modified[0], $modified[1], $modified[2]); ?>"><?= sprintf('%d 年 %d 月 %d 日', $modified[0], $modified[1], $modified[2]); ?></time>)</span>
                         </div>
+                        <?php if ( get_field( 'has_affiliates' ) ): ?>
+                        <aside class="post-info-row has-affiliate">
+                            <p class="has-affiliate__text">※この記事はアフィリエイトリンクを含みます。</p>
+                        </aside>
+                        <?php endif; ?>
                     </div>
 
                     <?php the_content(); ?>

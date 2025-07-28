@@ -79,6 +79,12 @@ figure {
     margin-inline: 0.3em;
 }
 
+.has-affiliate > .has-affiliate__text {
+    font-size: 0.8em;
+    text-indent: 0px;
+    margin-block: 0em;
+}
+
 .wp-block-image img {
     max-width: 100%;
     height: auto;
