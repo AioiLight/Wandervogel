@@ -2,7 +2,9 @@
         <div class="body">
             <main class="grid-item">
                 <div class="index-grid header-link">
-                    <?php if(have_posts()): while(have_posts()): the_post(); ?>
+                    <?php 
+                    $count = 0;
+                    if(have_posts()): while(have_posts()): the_post(); ?>
                     <a href="<?php the_permalink( $post ); ?>">
                         <article class="article-card">
                             <?php if (has_post_thumbnail()) : ?>
