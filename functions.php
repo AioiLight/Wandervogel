@@ -40,7 +40,7 @@ add_action("wp_enqueue_scripts", function () {
 	}
 
 	if (is_singular()) {
-		wp_enqueue_style( 'wandervogel-singular', get_stylesheet_directory_uri() . '/css/singular.min.css', array(), '20240722');
+		wp_enqueue_style( 'wandervogel-singular', get_stylesheet_directory_uri() . '/css/singular.min.css', array(), '20250729');
 
 		wp_enqueue_script( 'wandervogel-singular', get_stylesheet_directory_uri() . '/js/singular.min.js', array(), '20240820', array( 'strategy' => 'defer', 'in_footer' => false));
 	}
