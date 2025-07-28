@@ -1,0 +1,24 @@
+{
+  "name": "wandervogel",
+  "version": "7.0.0",
+  "description": "Wataridori",
+  "homepage": "https://github.com/AioiLight/Wandervogel#readme",
+  "bugs": {
+    "url": "https://github.com/AioiLight/Wandervogel/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AioiLight/Wandervogel.git"
+  },
+  "license": "GPL-2.0-or-later",
+  "author": "AioiLight",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "wp-env": "wp-env",
+    "start": "wp-env start && wp-env run cli wp theme activate Wandervogel"
+  },
+  "dependencies": {
+    "@wordpress/env": "^10.27.0"
+  }
+}
