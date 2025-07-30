@@ -228,6 +228,8 @@ aside:has(.wp-block-simpletoc-toc) {
 .affiliate-3ec__image > img {
     inline-size: 100%;
     block-size: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     display: block;
 }
 
