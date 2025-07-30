@@ -40,7 +40,7 @@ add_action("wp_enqueue_scripts", function () {
 	}
 
 	if (is_singular()) {
-		wp_enqueue_style( 'wandervogel-singular', get_stylesheet_directory_uri() . '/css/singular.min.css', array(), '20250729');
+		wp_enqueue_style( 'wandervogel-singular', get_stylesheet_directory_uri() . '/css/singular.min.css', array(), '20250731');
 
 		wp_enqueue_script( 'wandervogel-singular', get_stylesheet_directory_uri() . '/js/singular.min.js', array(), '20240820', array( 'strategy' => 'defer', 'in_footer' => false));
 	}
@@ -71,4 +71,49 @@ add_action( 'after_setup_theme', function(){
 	add_theme_support( 'editor-styles' );
 	add_editor_style( 'css/editor-style.css' );
 });
+
+// affiliate shortcode
+add_shortcode( 'af_3ec', 'af_3ec' );
+// affiliate shortcode
+function af_3ec( $atts ) {
+	$attrs = shortcode_atts(
+		array(
+			'image' => null,
+			'title' => 'タイトルなし',
+			'amazon' => '',
+			'rakuten' => '',
+			'yahoo' => '',
+		),
+		$atts
+	);
+	$image = isset($attrs['image']) ? wp_get_attachment_image( $attrs['image'], 'thumbnail' ) : null;
+	ob_start();
+	?>
+<aside class="affiliate-3ec <?php if ($image): ?>affiliate-3ec--has-image<?php endif; ?>">
+	<?php if ($image): ?>
+		<a href="<?= esc_url($attrs['amazon']); ?>" target="_blank" class="affiliate-3ec__image">
+			<?= $image; ?>
+		</a>
+	<?php endif; ?>
+	<div class="affiliate-3ec__content">
+		<p class="affiliate-3ec__title">
+			<?= esc_html($attrs['title']); ?>
+		</p>
+		<p class="affiliate-3ec__description">各ショッピングサイトの<span class="ib">商品ページ:</span></p>
+	</div>
+	<div class="affiliate-3ec__links">
+		<?php if (!empty($attrs['amazon'])): ?>
+			<a href="<?= esc_url($attrs['amazon']); ?>" target="_blank" class="affiliate-3ec__link affiliate-3ec__link--amazon">Amazon.co.jp</a>
+		<?php endif; ?>
+		<?php if (!empty($attrs['rakuten'])): ?>
+			<a href="<?= esc_url($attrs['rakuten']); ?>" target="_blank" class="affiliate-3ec__link affiliate-3ec__link--rakuten">楽天市場</a>
+		<?php endif; ?>
+		<?php if (!empty($attrs['yahoo'])): ?>
+			<a href="<?= esc_url($attrs['yahoo']); ?>" target="_blank" class="affiliate-3ec__link affiliate-3ec__link--yahoo">Yahoo! ショッピング</a>
+		<?php endif; ?>
+	</div>
+</aside>
+	<?php
+	return ob_get_clean();
+}
 ?>
