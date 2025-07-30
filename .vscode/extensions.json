@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "hookyqr.minify"
+        "hookyqr.minify",
+        "bmewburn.vscode-intelephense-client"
     ]
 }
