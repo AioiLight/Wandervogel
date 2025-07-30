@@ -103,13 +103,13 @@ function af_3ec( $atts ) {
 	</div>
 	<div class="affiliate-3ec__links">
 		<?php if (!empty($attrs['amazon'])): ?>
-			<a href="<?= esc_url($attrs['amazon']); ?>" target="_blank" class="affiliate-3ec__link affiliate-3ec__link--amazon">Amazon.co.jp</a>
+			<a href="<?= esc_url($attrs['amazon']); ?>" target="_blank" class="affiliate-3ec__link affiliate-3ec__link--amazon" rel="nofollow">Amazon.co.jp</a>
 		<?php endif; ?>
 		<?php if (!empty($attrs['rakuten'])): ?>
-			<a href="<?= esc_url($attrs['rakuten']); ?>" target="_blank" class="affiliate-3ec__link affiliate-3ec__link--rakuten">楽天市場</a>
+			<a href="<?= esc_url($attrs['rakuten']); ?>" target="_blank" class="affiliate-3ec__link affiliate-3ec__link--rakuten" rel="nofollow">楽天市場</a>
 		<?php endif; ?>
 		<?php if (!empty($attrs['yahoo'])): ?>
-			<a href="<?= esc_url($attrs['yahoo']); ?>" target="_blank" class="affiliate-3ec__link affiliate-3ec__link--yahoo">Yahoo! ショッピング</a>
+			<a href="<?= esc_url($attrs['yahoo']); ?>" target="_blank" class="affiliate-3ec__link affiliate-3ec__link--yahoo" rel="nofollow">Yahoo! ショッピング</a>
 		<?php endif; ?>
 	</div>
 </aside>
