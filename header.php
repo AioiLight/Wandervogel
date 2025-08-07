@@ -47,15 +47,7 @@ $thumb = is_singular() && has_post_thumbnail() ? wp_get_attachment_image_src( ge
             {
                 "@context": "https://schema.org",
                 "@type": "WebSite",
-                "url": "https://wangel.aioilight.space/",
-                "potentialAction": {
-                    "@type": "SearchAction",
-                    "target": {
-                    "@type": "EntryPoint",
-                    "urlTemplate": "https://wangel.aioilight.space/?s={s}"
-                    },
-                    "query-input": "required name=s"
-                }
+                "url": "https://wangel.aioilight.space/"
             }
         ]
         </script>
